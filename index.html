@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro Elettronico</title>
+		<meta charset="UTF-8">
+		<script src="javascript/funzioni.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<!--
+	░░░░░░░░▄▀▀████████▀██████▄▄▄▄▄▄░░░░░░░░
+	░░░░░░▄▀░▄▀░░▄▄▄▄▄░▀▄▄▄▄▄▄▀▀▀▄▄░▀▄░░░░░░
+	░░░░▄▀░░▀░▄▄▀░░░░░▀█▄░░░▄▀▀▀▀▄▀▀░░█░░░░░
+	░░░▄▀░░░░▄▀░▄███▀▀▄░▀░░█░▄▄▄▄▄░░▄▄█▄░░░░
+	░▄▀░░▄▀▀▄░░▀▀░▄▀▀▀██░░░██▀▀▀░▀▀░▀▀▀██▄░░
+	█░░▄▀░▄▄░▀▀░▀▀░░▄░▄▄░░░░█▄░░▄▄▀▀▀█▄░██░░
+	▀░░▀░▀▀░▀▀░░░░░▀░▀░░░░░░░▀▀▀░░░░░░░░░░░░
+	▄▄▄▄░░▄▄▄▄░░░▄▄▄░░▄▄▄▄░░▄▄░░░▄▄▄░▄▄░░░▄▄
+	██░██░██░██░██░██░██▄█▀░██░░░██▄░███▄███
+	██▀▀░░██▀█▄░██░██░██░██░██░░░██▀░██▀█▀██
+	██░░░░██░██░▀█▄█▀░████▀░████░███░██░░░██
+	░░░░░░░░░░░░░░░░░░░▄▄▄▄░░░░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░▄███▀▀▀██▄░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░███░░░░░███░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░░░░░▄▄▄██▀░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░░░░██▀▀░░░░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░░░░░░░░░
+	░░░░░░░░░░░░░░░░░░░▀▀░░░░░░░░░░░░░░░░░░░
+	-->
+	<body>
+		<div class="scelta">
+			<b>Scegli la materia: </b>
+			<select id="materia">
+				<option value="Matematica"    >Matematica    </option>
+				<option value="Informatica"   >Informatica   </option>
+				<option value="TPS"           >TPS           </option>
+				<option value="Sistemi e Reti">Sistemi e Reti</option>
+				<option value="Italiano"      >Italiano      </option>
+				<option value="Inglese"       >Inglese       </option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<b>Voto da inserire: </b>
+			<input type="text" id="voto" required>
+			<b>Data: </b>
+			<input type="text" id="data" required>
+			<b>Note: </b>
+			<input type="text" id="note" required>
+			<button type="button" onclick="addVoto();">Inserisci il voto</button>
+			<p id="tabella">Tabella non creata</p>
+			<p id="info"></p>
+			<p id="media"></p>
+			<p id="modifica"></p>
+		</div>
+	</body>
+</html>
