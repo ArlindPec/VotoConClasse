@@ -1,3 +1,5 @@
+/* Author: Arlind Pecmarkaj. Note that the variables and the comments are in Italian */
+
 function voto(valore, data, note){
 	this.valore = valore;
 	this.data = data;
@@ -5,8 +7,6 @@ function voto(valore, data, note){
 }
 
 var a, b;
-
-var voti = new Array(0,0,0,0,0,0);
 var media = new Array(0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
 
 function addVoto(){
@@ -45,7 +45,6 @@ function addVoto(){
 				media[indexMateria] += voti[i][j].valore ;
 			}	
 		}
-		//strTable += "<td><button onclick=\"calcolaMedia();\">Calcola la media</button></td>";
 		strTable += "</tr>";
 	}
 	document.getElementById("tabella").innerHTML = strTable + endStrTable;
@@ -74,8 +73,4 @@ function modificaVoto(a,b){
 	}
 	document.getElementById("cella["+a+"]["+b+"]").innerHTML = newVoto ;
 	document.getElementById("modifica").innerHTML = "";
-}
-function calcolaMedia(){ //a=riga della tabella, b=numero di voti
-	var str = "La media della materia selezionata è: ";
-	document.getElementById("media").innerHTML=str+media;
 }
